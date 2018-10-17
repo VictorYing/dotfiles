@@ -58,4 +58,4 @@ export DRAMSIMPATH=$ZSIMDEPSROOT/DRAMSim2/
 export ZSIMARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
 export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
 PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
-. /data/sanchez/tools/git-2.18/env.sh
+. /data/sanchez/tools/git-2.19/env.sh
