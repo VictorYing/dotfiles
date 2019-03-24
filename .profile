@@ -59,3 +59,4 @@ export ZSIMARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
 export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
 PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
 . /data/sanchez/tools/git-2.19/env.sh
+. /data/sanchez/tools/ninja-1.7.2/env.sh
