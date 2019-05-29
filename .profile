@@ -62,3 +62,4 @@ PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/g
 . /data/sanchez/tools/ninja-1.7.2/env.sh
 . /data/sanchez/tools/go-1.12/env.sh
 . /data/sanchez/tools/hugo-0.55/env.sh
+. /data/sanchez/tools/llvm-6.0.1-x86_64-linux-gnu-ubuntu-14.04/env.sh
