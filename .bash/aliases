@@ -56,11 +56,12 @@ fi
 # Aliases from Suvinay
 alias find_errors='find ./ -name cerr.log.bz2 | xargs bzgrep -H "failed\|assert\|SIG\|fault\|Panic\|Illegal"'
 alias find_err='find ./ -name cerr.log.bz2 | xargs bzfgrep -H "[sim]" | grep -v "WARN: "'
+alias find_dead='find ./ -name cout.log.bz2 | xargs bzfgrep -L "[sim] Done at cycle"'
 alias find_deadlock='find ./ -name cerr.log.bz2 | xargs bzgrep -H "Deadlock"'
 alias find_cycles='find ./ -name sim.out.bz2 | xargs bzgrep -H "Simulated cycles"'
 alias run_tests='./tests/run_all.py -d ./build/opt/tests/pls'
 alias run_sweep_tests='./build/opt/tests/pls/run.py -c configs/*.cfg --workers 8'
-alias sort_time="find ./ -name time.log | xargs grep -H 'wall clock' | sed -rn 's/.*-([0-9]+)c-.*wall clock.* ([0-9:]+)$/\\1c \\2/p' | sort -n"
+alias sort_time="find ./ -name time.log | xargs grep -H 'wall clock' | sed -rn 's/.*-([0-9]+)c-.*wall clock.* ([0-9\.:]+)$/\\1c \\2/p' | sort -n"
 alias sort_cycles="find ./ -name sim.out.bz2 | xargs bzgrep -H 'Simulated cycles' | sed -rn 's/.*-([0-9]+)c-.*: ([0-9]+) # Simulated cycles/\\1c \\2/p' | sort -k 1n | awk  '{ printf \"%4s %13.0f M cycles\\n\", \$1, \$2/=1000000}'"
 alias sort_all_cycles="find ./ -name sim.out.bz2 | xargs bzgrep -H 'Simulated cycles' | sed -rn 's/^\.\/([^\/]*)\/.*-([0-9]+)c-.*: ([0-9]+) # Simulated cycles/\\2c \\3 \\1/p' | sort -k 2n | sort -s -k 1n | awk  '{ printf \"%4s %13.6f M cycles %s\\n\", \$1, \$2/=1000000, \$3}'"
 
