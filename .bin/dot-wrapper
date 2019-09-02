@@ -2,5 +2,7 @@
 
 FILENAME=/tmp/victory_dot_${RANDOM}.pdf
 dot $1 -Tpdf >| ${FILENAME}
-xpdf ${FILENAME}
-rm -f ${FILENAME}
+mv ${FILENAME} ~/public_html/private/
+echo "View CFG at https://people.csail.mit.edu/victory/private/$(basename "${FILENAME}")"
+#xpdf ${FILENAME}
+#rm -f ${FILENAME}
