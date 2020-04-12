@@ -52,6 +52,7 @@ export PYTHONPATH=/data/sanchez/tools/pymodules/lib/python2.7/site-packages
 ZSIMDEPSROOT=/data/sanchez/benchmarks/zsim-deps
 export PINPATH=$ZSIMDEPSROOT/pin-2.14-71313-gcc.4.4.7-linux
 export PIN_HOME=$PINPATH
+export HDF5PATH=/data/sanchez/tools/hdf5-1.8.21/install/
 export LIBCONFIGPATH=$ZSIMDEPSROOT/libconfig-1.4.9/inst/
 export POLARSSLPATH=$ZSIMDEPSROOT/polarssl-1.1.4/
 export DRAMSIMPATH=$ZSIMDEPSROOT/DRAMSim2/
