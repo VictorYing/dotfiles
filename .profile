@@ -59,12 +59,8 @@ export DRAMSIMPATH=$ZSIMDEPSROOT/DRAMSim2/
 export ZSIMARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
 export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
 PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
-. /data/sanchez/tools/git-2.19/env.sh
-. /data/sanchez/tools/ninja-1.7.2/env.sh
-. /data/sanchez/tools/go-1.12/env.sh
 . /data/sanchez/tools/hugo-0.55/env.sh
-. /data/sanchez/tools/llvm-6.0.1-x86_64-linux-gnu-ubuntu-14.04/env.sh
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+##eval "$(pyenv virtualenv-init -)"
