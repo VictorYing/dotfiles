@@ -48,18 +48,18 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 
 # Make group tools available.
-export PYTHONPATH=/data/sanchez/tools/pymodules/lib/python2.7/site-packages
+#export PYTHONPATH=/data/sanchez/tools/pymodules/lib/python2.7/site-packages
 ZSIMDEPSROOT=/data/sanchez/benchmarks/zsim-deps
 export PINPATH=$ZSIMDEPSROOT/pin-2.14-71313-gcc.4.4.7-linux
-export PIN_HOME=$PINPATH
+#export PIN_HOME=$PINPATH
 export HDF5PATH=/data/sanchez/tools/hdf5-1.8.21/install/
 export LIBCONFIGPATH=$ZSIMDEPSROOT/libconfig-1.4.9/inst/
-export POLARSSLPATH=$ZSIMDEPSROOT/polarssl-1.1.4/
-export DRAMSIMPATH=$ZSIMDEPSROOT/DRAMSim2/
-export ZSIMARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
-export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
-PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
-. /data/sanchez/tools/hugo-0.55/env.sh
+#export POLARSSLPATH=$ZSIMDEPSROOT/polarssl-1.1.4/
+#export DRAMSIMPATH=$ZSIMDEPSROOT/DRAMSim2/
+export ARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
+#export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
+#PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
+#. /data/sanchez/tools/hugo-0.72/env.sh
 
 #export PATH="$HOME/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
