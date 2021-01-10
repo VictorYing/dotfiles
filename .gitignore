@@ -49,6 +49,8 @@
 /.ipython/
 /.ivy2/
 /.java/
+/.jupyter/lab/workspaces/
+/.jupyter/migrated
 /.kde/
 /.lesshsQ
 /.lesshst
