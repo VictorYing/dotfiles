@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+set -e
+
 FILENAME=/tmp/${USER}_dot_${RANDOM}.pdf
 dot $1 -Tpdf >| ${FILENAME}
 mv ${FILENAME} ~/public_html/private/
 echo "View CFG at https://people.csail.mit.edu/${USER}/private/$(basename "${FILENAME}")"
 #xpdf ${FILENAME}
-#rm -f ${FILENAME}
+rm -f ${FILENAME}
