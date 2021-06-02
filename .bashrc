@@ -5,6 +5,12 @@
 [[ "$-" != *i* ]] && return
 
 
+# Normally, we want to put dotfiles in the home directory, so $HOME should equal $DOTFILES_HOME
+# But for situations where I have to share a single login with others to a shared machine,
+# try to allow setting up dotfiles in some other directory.
+export DOTFILES_HOME="$(cd "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+
 # Miscellaneous shell options
 # See man bash for more options...
 
@@ -190,15 +196,15 @@ umask 022
 # Aliases
 #
 # Some people use a different file for aliases
-if [ -f "${HOME}/.bash/aliases" ]; then
-  source "${HOME}/.bash/aliases"
+if [ -f "${DOTFILES_HOME}/.bash/aliases" ]; then
+  source "${DOTFILES_HOME}/.bash/aliases"
 fi
 
 # Functions
 #
 # Some people use a different file for functions
-if [ -f "${HOME}/.bash/functions" ]; then
-  source "${HOME}/.bash/functions"
+if [ -f "${DOTFILES_HOME}/.bash/functions" ]; then
+  source "${DOTFILES_HOME}/.bash/functions"
 fi
 
 # Check if we can use SSH agent.
@@ -244,7 +250,7 @@ if [ -z "${DISPLAY+x}" ]; then
     export DISPLAY="$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0"
   fi
 fi
-X_SCRIPT="${HOME}/.${HOSTNAME}_x_env.sh"
+X_SCRIPT="${DOTFILES_HOME}/.${HOSTNAME}_x_env.sh"
 xset q >/dev/null 2>&1
 if [ $? != 0 ]; then
   # No X server reachable

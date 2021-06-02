@@ -54,11 +54,17 @@ fi
 
 set -e
 
-if [ ! -d $HOME/.dotfiles ] ; then
-  git clone --no-checkout git@github.com:YingVictor/dotfiles.git $HOME/.dotfiles
+# Normally, we want to put dotfiles in the home directory, so $HOME should equal $DOTFILES_HOME
+# But for situations where I have to share a single login with others to a shared machine,
+# try to allow setting up dotfiles in some other directory.
+DOTFILES_HOME="$(cd "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo "Setting up dotfiles in ${DOTFILES_HOME}..."
+
+if [ ! -d $DOTFILES_HOME/.dotfiles ] ; then
+  git clone --no-checkout git@github.com:YingVictor/dotfiles.git $DOTFILES_HOME/.dotfiles
 fi
 
-DOTFILES="git --git-dir="$HOME"/.dotfiles/.git --work-tree="$HOME
+DOTFILES="git --git-dir="$DOTFILES_HOME"/.dotfiles/.git --work-tree="$DOTFILES_HOME
 
 $DOTFILES status >/dev/null 2>&1
 if [ $? != 0 ]; then
@@ -80,18 +86,18 @@ set +e
 $DOTFILES checkout -q
 if [ $? != 0 ]; then
     echo "Backing up pre-existing dotfiles."
-    BACKUP_DIR=$HOME/.backup
+    BACKUP_DIR=$DOTFILES_HOME/.backup
     mkdir -p $BACKUP_DIR && \
         $DOTFILES checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
-        xargs -I{} bash -c "mvp $HOME/{} $BACKUP_DIR/{}"
+        xargs -I{} bash -c "mvp $DOTFILES_HOME/{} $BACKUP_DIR/{}"
     set -e
     $DOTFILES checkout -q
     shopt -s dotglob
-    for FILENAME in $HOME/.backup/*; do
+    for FILENAME in $DOTFILES_HOME/.backup/*; do
         FILENAME=$(basename ${FILENAME})
-        if diff -q $HOME/$FILENAME $HOME/.backup/$FILENAME; then
+        if diff -q $DOTFILES_HOME/$FILENAME $DOTFILES_HOME/.backup/$FILENAME; then
             echo "Preexisting ${FILENAME} matches, deleting backup."
-            rm -rf $HOME/.backup/$FILENAME
+            rm -rf $DOTFILES_HOME/.backup/$FILENAME
         fi
     done
 fi
