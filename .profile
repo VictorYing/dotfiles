@@ -20,11 +20,11 @@ if [ -d "${HOME}/bin" ] ; then
 fi
 
 # Set MANPATH so it includes users' private man if it exists
-if [ -d "${home}/.local/man" ]; then
-  manpath="${home}/.local/man:${manpath}"
+if [ -d "${HOME}/.local/man" ]; then
+  export MANPATH="${HOME}/.local/man:${MANPATH}"
 fi
-if [ -d "${home}/.man" ]; then
-  manpath="${home}/.man:${manpath}"
+if [ -d "${HOME}/.man" ]; then
+  export MANPATH="${HOME}/.man:${MANPATH}"
 fi
 
 if command -v vim >/dev/null 2>&1; then
