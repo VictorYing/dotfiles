@@ -254,6 +254,7 @@ X_SCRIPT="${DOTFILES_HOME}/.${HOSTNAME}_x_env.sh"
 xset q >/dev/null 2>&1
 if [ $? != 0 ]; then
   # No X server reachable
+  unset DISPLAY
   if [ -f "$X_SCRIPT" ]; then
     source "$X_SCRIPT"
   fi
