@@ -243,8 +243,9 @@ fi
 
 # Check if we can use X server.
 if [ -z "${DISPLAY+x}" ]; then
-  if [ $(grep -oE 'gcc version ([0-9]+)' /proc/version | awk '{print $3}') -gt 5 ]; then
-    # https://github.com/microsoft/WSL/issues/4555#issuecomment-539674785
+  # https://github.com/microsoft/WSL/issues/4555#issuecomment-539674785
+  #if [ $(grep -oE 'gcc version ([0-9]+)' /proc/version | awk '{print $3}') -gt 5 ]; then
+  if [[ -n "$WSL_INTEROP" ]]; then
     # https://github.com/microsoft/WSL/issues/4106
     # https://stackoverflow.com/q/61110603
     export DISPLAY="$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0"
@@ -273,3 +274,4 @@ else
     rm -f "$TMP_X_SCRIPT"
   fi
 fi
+
