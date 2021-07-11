@@ -153,14 +153,23 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# Debian/Ubuntu packages for git install a copy of
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-git_prompt_sh="/usr/lib/git-core/git-sh-prompt"
+git_prompt_sh="/usr/lib/git-core/git-sh-prompt" # Debian/Ubuntu packages install a copy here
+if [[ ! -f "${git_prompt_sh}" ]]; then
+    git_prompt_sh="/usr/share/git-core/contrib/completion/git-prompt.sh" # CentOS
+fi
 if [[ -f "${git_prompt_sh}" ]]; then
     source "${git_prompt_sh}"  # This defines the __git_ps1 bash function
     # See substring replacement in the Bash Advanced Scripting Guide
     # https://tldp.org/LDP/abs/html/string-manipulation.html
-    PS1="${PS1/%'\$ '/'$(__git_ps1 " (%s)")\$ '}"
+    # Note: Bash version 4.3 or greater allows using quotes as escape
+    # characters in the replacement string during pattern substitution
+    # https://github.com/bminor/bash/blob/ce23728687ce9e584333367075c9deef413553fa/COMPAT#L370-L373
+    # This would allow us to write:
+    #PS1="${PS1/%'\$ '/'$(__git_ps1 " (%s)")\$ '}"
+    # But, for compability with Bash 4.2 (or older), e.g., on CentOS 7, we must
+    # backslash-escape all special characters in the replacement string:
+    PS1="${PS1/%'\$ '/\$(__git_ps1 \" (%s)\")\\\$ }"
 
     GIT_PS1_SHOWDIRTYSTATE="true"  # This is slow for large repos: git config --local bash.showDirtyState false
     GIT_PS1_SHOWSTASHSTATE="true"
