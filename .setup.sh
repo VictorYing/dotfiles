@@ -6,6 +6,8 @@ shopt -s extglob
 #
 # ssh-keygen -t rsa -b 4096
 #
+# umask 022
+#
 # wget https://raw.githubusercontent.com/VictorYing/dotfiles/master/.setup.sh
 # chmod +x .setup.sh
 # ./.setup.sh
