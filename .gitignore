@@ -18,6 +18,7 @@
 # Also ignore various temporary, frequently changing, or machine-specific files
 /.aptitude/
 /.aspell.en.*
+/.azcopy/
 /.bash_history
 /.cache/
 /.cargo/
@@ -45,6 +46,7 @@
 /.macromedia/
 /.matlab/
 /.mozilla/
+/.nv/
 /.opam/
 /.oracle_jre_usage/
 /.parallel/tmp/
