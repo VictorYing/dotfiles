@@ -56,8 +56,13 @@ if has("autocmd")
     autocmd BufNewFile,BufRead SCons* set filetype=scons
     " For working with git-revise (https://github.com/mystor/git-revise)
     autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
-    " I don't use Modula-2
+    " I don't use Modula-2.  Only needed for old versions of Vim.  See:
+    " https://github.com/vim/vim/commit/7d76c804af900ba6dcc4b1e45373ccab3418c6b2#diff-c07c0771a9f5af08e375703487a8fe7bbddd71f98a7bbe06acd78365525a243eR1246
     autocmd BufNewFile,BufRead *.md set filetype=markdown
+    " I don't use Smalltalk.  Needed for (La)TeX .cls files that don't start
+    " with a comment.  See:
+    " https://github.com/vim/vim/blob/50157ef1c2e36d8696e79fd688bdd08312196bc6/runtime/filetype.vim#L1624
+    autocmd BufNewFile,BufRead *.cls set filetype=tex
 
     " Use actual tab chars in Makefiles.
     autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
