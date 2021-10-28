@@ -60,6 +60,7 @@ export ARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
 #export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
 #PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
 #. /data/sanchez/tools/hugo-0.72/env.sh
+source /data/sanchez/tools/xilinx/ubuntu1804/vitis-2021.1/Vitis/2021.1/settings64.sh
 
 #export PATH="$HOME/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
