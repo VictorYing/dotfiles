@@ -27,7 +27,7 @@
 [diff "pdf"]
 	textconv = pdfinfo
 [alias]
-	showtrackedignored = ls-files -i --exclude-standard
+	showtrackedignored = ls-files -i -c --exclude-standard
 [status]
 	short = true
 	branch = true
