@@ -10,3 +10,13 @@ tags
 
 # NFS open-but-deleted files
 .nfs*
+
+## Emacs backup files
+#*~
+## Emacs autosave files
+#\#*#
+## Emacs lock files
+#.#*
+## Emacs desktop files
+#.emacs.desktop
+#.emacs.desktop.lock
