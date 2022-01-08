@@ -32,6 +32,9 @@ alias la='ls -A'                              # all but . and ..
 alias lla='ls -lA'
 # alias l='ls -CF'                              #
 
+# vim
+alias vimn='vim -c "set nowrap"'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
