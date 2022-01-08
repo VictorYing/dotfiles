@@ -1,11 +1,6 @@
 set editing-mode vi
 set show-mode-in-prompt on
 
-set completion-ignore-case on
-set completion-map-case on
-set completion-prefix-display-length 4
-set colored-stats on
-
 $if mode=vi
   set keymap vi-command
   "gg": beginning-of-history
@@ -14,4 +9,24 @@ $if mode=vi
   "jj": vi-movement-mode
   "\C-p": history-search-backward
   #"\C-l": clear-screen
+$endif
+
+set blink-matching-paren on
+
+$if Bash
+  # Pressing space performs immediate history expansion
+  Space: magic-space
+
+  # Control terminal alert/error noise.
+  #set bell-style none
+  set bell-style visible
+
+  set completion-ignore-case on
+  set completion-map-case on
+  set completion-prefix-display-length 4
+
+  set colored-stats on
+  set visible-stats on
+  # colored-completion-prefix available since readline-7.0 / bash-4.4
+  set colored-completion-prefix on
 $endif
