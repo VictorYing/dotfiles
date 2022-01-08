@@ -60,10 +60,10 @@
 /.slocdata/
 /.smartgit/
 /.snapshot*
-/.ssh/authorized_keys
+/.ssh/authorized_keys*
 /.ssh/id_*
 /.ssh/keys/
-/.ssh/known_hosts
+/.ssh/known_hosts*
 /.ssh/private/
 /.ssh/README
 /.subversion/
