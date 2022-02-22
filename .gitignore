@@ -22,7 +22,6 @@
 /.bash_history
 /.cache/
 /.cargo/
-/.ccache/
 /.cinnamon/
 /.cmake/
 /.config/dconf/
