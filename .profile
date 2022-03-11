@@ -62,6 +62,7 @@ export ARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
 #. /data/sanchez/tools/hugo-0.72/env.sh
 source /data/sanchez/tools/xilinx/ubuntu1804/vitis-2021.1/Vitis/2021.1/settings64.sh
 
+export SWARM_BENCHMARKS_DIR=$(realpath $HOME/clones/swarm/benchmarks)
 export CCACHE_DIR=/scratch/$USER/ccache
 
 #export PATH="$HOME/.pyenv/bin:$PATH"
