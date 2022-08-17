@@ -20,6 +20,7 @@ $if Bash
   set completion-ignore-case on
   set completion-map-case on
   set completion-prefix-display-length 4
+  set show-all-if-unmodified on
 
   set colored-stats on
   set visible-stats on
