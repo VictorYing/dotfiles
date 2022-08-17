@@ -104,8 +104,8 @@ HISTIGNORE=$'[ \t]*:&:[fb]g:exit:logout'
 # HISTIGNORE=$'[ \t]*:&:[fb]g:exit:logout:ls' # Ignore the ls command as well
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # Whenever displaying the prompt, write the previous line to disk
 PROMPT_COMMAND="history -a"
