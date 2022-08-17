@@ -129,9 +129,15 @@ endif
 
 set ttyfast
 
-" Disable beeping, instead flash screen if possible
+" Do *not* disable beeping.  Attempting to flash screen depending on t_vb is
+" unreliable.  Instead, enforce the default that bells send \a to the
+" terminal.  I leave it to my terminal to decide whether to actually play an
+" audible sound.  In Windows Terminal, for example, I set `Settings > Profiles
+" > Defaults > Advanced > Bell notification style` to "Flash window"
+set novisualbell
+" normal-mode errors that display error messages should also 'ring the bell'
+set errorbells
 " N.B. Nvim has 'belloff' which is enabled by default.
-set visualbell
 
 " Always show status bar
 set laststatus=2

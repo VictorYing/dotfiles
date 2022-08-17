@@ -17,10 +17,6 @@ $if Bash
   # Pressing space performs immediate history expansion
   Space: magic-space
 
-  # Control terminal alert/error noise.
-  #set bell-style none
-  set bell-style visible
-
   set completion-ignore-case on
   set completion-map-case on
   set completion-prefix-display-length 4
@@ -30,3 +26,10 @@ $if Bash
   # colored-completion-prefix available since readline-7.0 / bash-4.4
   set colored-completion-prefix on
 $endif
+
+# bash/readline's visual bell is buggy/unreliable especially over SSH
+# connections.  I choose to enforce the default that bells send \a for bell,
+# and I leave it to my terminal to decide whether to actually play an audible
+# sound.  In Windows Terminal, for example, I set 'Settings > Profiles >
+# Defaults > Advanced > Bell notification style' to "Flash window"
+set bell-style audible
