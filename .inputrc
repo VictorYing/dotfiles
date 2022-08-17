@@ -33,3 +33,9 @@ $endif
 # sound.  In Windows Terminal, for example, I set 'Settings > Profiles >
 # Defaults > Advanced > Bell notification style' to "Flash window"
 set bell-style audible
+
+# Allow 8-bit input/output
+set meta-flag on
+set convert-meta off
+set input-meta on
+set output-meta on
