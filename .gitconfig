@@ -33,3 +33,5 @@
 	branch = true
 [diff-so-fancy]
 	stripLeadingSymbols = false
+[safe]
+	directory = *
