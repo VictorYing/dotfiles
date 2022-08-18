@@ -74,6 +74,8 @@ if has("autocmd")
     if has('python')
         autocmd FileType c,cpp map <C-I> :pyf ~/.vim/clang-format.py<CR>
     elseif has('python3')
+        " NOTE: For Neovim, you might need to run:
+        " python3 -m pip install --user --upgrade pynvim
         autocmd FileType c,cpp map <C-I> :py3f ~/.vim/clang-format.py<CR>
     endif
 
