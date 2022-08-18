@@ -24,12 +24,14 @@
 /.cargo/
 /.cinnamon/
 /.cmake/
+/.config/autostart/Xilinx*
 /.config/dconf/
 /.config/evince/
 /.config/gtk-*.0/
 /.config/htop/htoprc
 /.config/libreoffice/
 /.config/menus/applications-merged/xdg-desktop-menu-dummy.menu
+/.config/menus/applications-merged/Xilinx*
 /.config/nvim/plugin/packer_compiled.lua
 /.config/pulse/
 /.config/Thunar/
