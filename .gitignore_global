@@ -10,8 +10,9 @@ tags
 # Vim swap files
 .*.swp
 
-# NFS open-but-deleted files
+# NFS/AFS open-but-deleted files
 .nfs*
+.__afs*
 
 ## Emacs backup files
 #*~
