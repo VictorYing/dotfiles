@@ -31,6 +31,7 @@ set viminfo=!,'10,\"1000,:1000,%,n~/.viminfo
 " If file is changed outside of vim and not changed inside of vim,
 " automatically update vim buffer contents to match new file contents.
 " You can undo with 'u'.
+" NOTE: This won't work in tmux unless you configure tmux to pass through focus events
 set autoread
 
 set tabpagemax=50
