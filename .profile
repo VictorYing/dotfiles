@@ -65,6 +65,8 @@ source /data/sanchez/tools/xilinx/ubuntu1804/vitis-2021.1/Vitis/2021.1/settings6
 export SWARM_BENCHMARKS_DIR=$(realpath $HOME/clones/swarm/benchmarks)
 export CCACHE_DIR=/scratch/$USER/ccache
 
+source /data/sanchez/tools/neovim-0.7.2/env.sh
+
 #export PATH="$HOME/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
 ##eval "$(pyenv virtualenv-init -)"
