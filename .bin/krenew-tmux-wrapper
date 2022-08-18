@@ -9,7 +9,7 @@ fi
 tmux kill-server >/dev/null 2>&1
 
 cd $HOME
-tmux -u new-session -d -s krenewed
+tmux -u new-session -d -s krenewed -t krenewed
 
 while [ $(tmux ls 2>/dev/null | wc -l) -gt 0 ]; do
     sleep 60

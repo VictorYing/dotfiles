@@ -43,7 +43,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias dotfiles='git --git-dir=$DOTFILES_HOME/.dotfiles/.git --work-tree=$DOTFILES_HOME'
 
 # Start tmux with krenew-tmux-wrapper
-alias ktmux='krenew -biLt -- krenew-tmux-wrapper && sleep 0.5 && tmux -u attach'
+alias ktmux='krenew -biLt -- krenew-tmux-wrapper && sleep 0.5; tmux -u new-session -t krenewed'
 
 # Dirty hacks:
 
