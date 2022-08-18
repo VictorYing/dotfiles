@@ -20,6 +20,7 @@ inoremap <C-W> <C-G>u<C-W>
 " Remember more command-line history
 set history=1000
 
+if !has('nvim')
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
 "  "1000:  will save up to 1000 lines for each register
@@ -27,6 +28,7 @@ set history=1000
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
 set viminfo=!,'10,\"1000,:1000,%,n~/.viminfo
+endif
 
 " If file is changed outside of vim and not changed inside of vim,
 " automatically update vim buffer contents to match new file contents.

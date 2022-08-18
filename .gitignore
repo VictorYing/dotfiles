@@ -25,7 +25,16 @@
 /.ccache/
 /.cinnamon/
 /.cmake/
-/.config/
+/.config/dconf/
+/.config/evince/
+/.config/gtk-*.0/
+/.config/htop/htoprc
+/.config/libreoffice/
+/.config/menus/applications-merged/xdg-desktop-menu-dummy.menu
+/.config/pulse/
+/.config/Thunar/
+/.config/xfce4/
+/.config/xubuntu/
 /.dbus/
 /.debug/
 /.dmrc
