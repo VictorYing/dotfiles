@@ -169,6 +169,9 @@ set sidescroll=1
 " Keep context columns visible around cursor
 set sidescrolloff=5
 
+" Show wrapped lines as indented blocks
+set breakindent
+
 " Show potentially unwanted whitespace and line wraps
 set list listchars=tab:▸\ ,trail:·,nbsp:·,precedes:←,extends:→
 
