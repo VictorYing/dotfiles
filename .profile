@@ -69,6 +69,8 @@ source /data/sanchez/tools/nodejs-16.17.0/env.sh
 export PATH=/data/sanchez/users/victory/home/.npm-global/bin:$PATH
 
 source /data/sanchez/tools/neovim-0.7.2/env.sh
+source /data/sanchez/tools/clangd-14.0.3/env.sh
+source /data/sanchez/tools/ripgrep-13.0.0/env.sh
 
 #export PATH="$HOME/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
