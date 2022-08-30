@@ -32,6 +32,11 @@ require('packer').startup(function(use)
   use 'jremmen/vim-ripgrep'
 
   use 'nvim-lualine/lualine.nvim'
+
+  use {
+      'lewis6991/gitsigns.nvim',
+      tag = 'release',
+  }
 end)
 
 require'nvim-treesitter.configs'.setup {
@@ -54,5 +59,15 @@ require('lualine').setup {
     icons_enabled = false,
     component_separators = '|',
     section_separators = '',
+  },
+}
+
+require('gitsigns').setup {
+  signs = {
+    add = { text = '+' },
+    change = { text = '~' },
+    delete = { text = '_' },
+    topdelete = { text = '‾' },
+    changedelete = { text = '~' },
   },
 }
