@@ -1,5 +1,10 @@
 set nocompatible
 
+" The leader key must be set before any other mappings that reference it
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+let maplocalleader=" "
+
 " PER-DIRECTORY .vimrc
 set exrc
 set secure
