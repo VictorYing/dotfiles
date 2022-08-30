@@ -28,6 +28,8 @@ require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
       requires = { {'nvim-lua/plenary.nvim'} }
   }
+  -- Note this requires `make` and one of `gcc` or `clang` to be available in $PATH
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   -- since telescope.nvim requires rg, might as well get used to using rg
   use 'jremmen/vim-ripgrep'
 
@@ -53,6 +55,8 @@ require'nvim-treesitter.configs'.setup {
 require'lspconfig'.clangd.setup{}
 
 require('telescope').setup()
+-- Enable telescope fzf native, if installed
+pcall(require('telescope').load_extension, 'fzf')
 
 require('lualine').setup {
   options = {
