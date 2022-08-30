@@ -19,6 +19,8 @@ require('packer').startup(function(use)
   }
   -- since telescope.nvim requires rg, might as well get used to using rg
   use 'jremmen/vim-ripgrep'
+
+  use 'nvim-lualine/lualine.nvim'
 end)
 
 require'nvim-treesitter.configs'.setup {
@@ -35,3 +37,11 @@ require'nvim-treesitter.configs'.setup {
 require'lspconfig'.clangd.setup{}
 
 require('telescope').setup()
+
+require('lualine').setup {
+  options = {
+    icons_enabled = false,
+    component_separators = '|',
+    section_separators = '',
+  },
+}
