@@ -61,6 +61,8 @@ alias find_deadlock='find -L ./ -name cerr.log.bz2 | xargs bzgrep -H "Deadlock"'
 alias find_cycles='find -L ./ -name sim.out.bz2 | xargs bzgrep -H "Simulated cycles"'
 alias run_tests='./tests/run_all.py -d ./build/opt/tests/pls'
 alias run_sweep_tests='./build/opt/tests/pls/run.py -c configs/*.cfg --workers 8'
+alias sort_mem="find -L ./ -name time.log | xargs grep -H 'Maximum resident set size' | sed -rn 's/.*-([0-9]+)c-.*resident set size.* ([0-9\.:]+)$/\\1c \\2/p' | sort -V"
+alias sort_all_mem="find -L ./ -name time.log | xargs grep -H 'Maximum resident set size' | sed -rn 's/^\.\/([^\/]*)\/.*.*-([0-9]+)c-.*resident set size.* ([0-9\.:]+)$/\\2c \\3 \\1/p' | sort -V"
 alias sort_time="find -L ./ -name time.log | xargs grep -H 'wall clock' | sed -rn 's/.*-([0-9]+)c-.*wall clock.* ([0-9\.:]+)$/\\1c \\2/p' | sort -V"
 alias sort_all_time="find -L ./ -name time.log | xargs grep -H 'wall clock' | sed -rn 's/^\.\/([^\/]*)\/.*.*-([0-9]+)c-.*wall clock.* ([0-9\.:]+)$/\\2c \\3 \\1/p' | sort -V"
 alias sort_cycles="find -L ./ -name sim.out.bz2 | xargs bzgrep -H 'Simulated cycles' | sed -rn 's/.*-([0-9]+)c-.*: ([0-9]+) # Simulated cycles/\\1c \\2/p' | sort -k 1n | awk  '{ printf \"%4s %13.0f M cycles\\n\", \$1, \$2/=1000000}'"
