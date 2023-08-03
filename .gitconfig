@@ -1,6 +1,6 @@
 [user]
-	name = Victor A. Ying
-	email = victory@csail.mit.edu
+	name = Victor Ying
+	email = vying@tenstorrent.com
 [push]
 	default = simple
 [pull]
