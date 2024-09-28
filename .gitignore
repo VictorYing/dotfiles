@@ -16,6 +16,7 @@
 .sw?
 
 # Also ignore various temporary, frequently changing, or machine-specific files
+/.apptainer/
 /.aptitude/
 /.aspell.en.*
 /.azcopy/
@@ -29,6 +30,7 @@
 /.config/evince/
 /.config/gtk-*.0/
 /.config/htop/htoprc
+/.config/ibus/
 /.config/libreoffice/
 /.config/menus/applications-merged/xdg-desktop-menu-dummy.menu
 /.config/nvim/plugin/packer_compiled.lua
@@ -59,7 +61,9 @@
 /.local/man/
 /.local/share/.cpan/
 /.local/share/applications/
+/.local/share/containers/
 /.local/share/desktop-directories/
+/.local/share/gvfs-metadata/
 /.local/share/jupyter/
 /.local/share/man/
 /.local/share/meld/
@@ -71,9 +75,12 @@
 /.local/share/nvim/telescope_history
 /.local/share/nvim/undo/
 /.local/share/recently-used.xbel
+/.local/share/tracker/
+/.local/share/virtualenv/
 /.macromedia/
 /.matlab/
 /.mozilla/
+/.mysql_history
 /.nv/
 /.opam/
 /.oracle_jre_usage/
@@ -85,6 +92,7 @@
 /.pylint.d/
 /.python_history
 /.rustup/
+/.singularity/
 /.slocdata/
 /.smartgit/
 /.snapshot*
@@ -101,6 +109,7 @@
 /.vim/.netrwhist
 /.vim/spell/*.spl
 /.viminfo
+/.vnc
 /.vscode-cpptools/
 /.vscode-server/
 /.wget-hsts
