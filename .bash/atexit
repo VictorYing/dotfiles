@@ -1,0 +1,1 @@
+merge_history.sh && rm -f "$HISTFILE"

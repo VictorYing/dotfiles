@@ -45,6 +45,13 @@ alias dotfiles='git --git-dir=$DOTFILES_HOME/.dotfiles/.git --work-tree=$DOTFILE
 # Start tmux with krenew-tmux-wrapper
 alias ktmux='krenew -biLt -- krenew-tmux-wrapper && sleep 0.5; tmux -u new-session -t krenewed'
 
+# View merged history
+mh ()
+{
+    merge_history.sh;
+    ( HISTFILE="$HOME/.bash_history" eval 'history -c; history -r; history | less' )
+}
+
 # Dirty hacks:
 
 #AUCTeX somehow causing Emacs to crash when attempting to connect to dbus in Cygwin?
