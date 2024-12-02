@@ -107,12 +107,6 @@ HISTIGNORE=$'[ \t]*:&:[fb]g:exit:logout'
 HISTSIZE=100000
 HISTFILESIZE=200000
 
-# Ensure each concurrent shell session has its own history file
-mkdir -p "${DOTFILES_HOME}/.bash/histories"
-HISTFILE="${DOTFILES_HOME}/.bash/histories/${HOSTNAME}.$$"
-# Add timestamps to allow merge-sorting of histories from multiple concurrent shell sessions
-HISTTIMEFORMAT='%F %T '
-
 # Whenever displaying the prompt, write the previous line to disk
 PROMPT_COMMAND="history -a"
 
@@ -290,4 +284,3 @@ else
   fi
 fi
 
-source ${DOTFILES_HOME}/.bash/atexit

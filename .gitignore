@@ -124,4 +124,3 @@
 /.*_x_env.sh
 /.*_x_env.sh.bak
 /.ssh/*_env.sh
-/.bash/histories/*
